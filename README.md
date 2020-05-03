@@ -1,7 +1,7 @@
 # Resume-Builder
 This is a Web based application used to generate a resume/CV. The application involves signing up of new users, followed by logging in of signed up users. Further the user needs to fill in the details asked in the particular section and can finally download the resume in pdf format.
 
-# Project and applications functionality
+# Project and applications - Functionality
 Resume_builder is the project folder. Core, users and download are the apps. Core contains the core functionality of creating the resume by collecting information from the user. Users contains user realted functionality like user authentication. Download application is used to download the generated resume in pdf format.
 
 # Requirements
