@@ -35,3 +35,5 @@ class SkillForm(forms.ModelForm):
         model = Skills
         fields = '__all__'
         exclude = ['fname','user']
+
+        
