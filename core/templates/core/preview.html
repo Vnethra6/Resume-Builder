@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'core/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/main.css' %}">
+    <title>Resume Builder - Download</title>
+</head>
+<body>
+
+<div>
+    <h3>Basic Information</h3>
+    <main role="main" class="container">
+    <p>Name: {{basic_info.fname}}</p>
+    <p>Email: {{basic_info.Email}}</p>
+    <p>Phone: {{basic_info.phone}}</p>
+    <p>Address: {{basic_info.address}}</p>
+    </main>
+</div>
+<div>
+    <h3>Education</h3>
+    <main role="main" class="container">
+    <p>Course: {{education.get_course_display}}</p>
+    <p>Institution: {{education.get_institution_display}}</p>
+    <p>Start Date: {{education.start_date}}</p>
+    <p>End Date: {{education.end_date}}</p>
+    </main>
+</div>
+<div>
+    <h3>Experience</h3>
+    <main role="main" class="container">
+    <p>Job Title: {{experience.get_job_title_display}}</p>
+    <p>Company Name: {{experience.get_company_display}}</p>
+    <p>Start Date: {{experience.start_date}}</p>
+    <p>End_date: {{experience.end_date}}</p>
+    </main>
+</div>
+
+<div>
+    <h3>Interest</h3>
+    <main role="main" class="container">
+    <p>Interest: {{interest.interests}}</p>
+    </main>
+</div>
+
+<div>
+    <h3>Skills</h3>
+    <main role="main" class="container">
+    <p>Skills: {{skills.skills}}</p>
+    </main>
+</div>
+<button type="submit"><a href="{% url 'download' %}">Download</a></button>
+<button type="submit"><a href="{% url 'resume-builder-sections' %}">Back</a></button>
+<script src="{% static 'core/bootstrap.min.js' %}"></script>
+</body>
+</html>
+

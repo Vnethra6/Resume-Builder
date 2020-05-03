@@ -1,0 +1,23 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'core/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/main.css' %}">
+    <meta charset="UTF-8">
+    <title>Resume Builder - Basic Information</title>
+</head>
+<body>
+<h3>Basic Info Section</h3>
+<main role="main" class="container">
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form | crispy}}
+    <input type="submit" value="SUBMIT">
+    <button type="submit"><a href="{% url 'resume-builder-sections' %}">Back</a></button>
+</form>
+</main>
+<script src="{% static 'core/bootstrap.min.js' %}"></script>
+</body>
+</html>

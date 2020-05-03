@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'core/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/main.css' %}">
+    <meta charset="UTF-8">
+    <title>Resume Builder - homepage</title>
+</head>
+<body>
+
+<main role="main" class="container">
+    <h1>Resume Builder</h1>
+<br>
+<p>create your resume in simple steps..</p>
+<br>
+    <small>Create an account <button type="submit"><a href="{% url 'register' %}">SignUp</a></button></small>
+<small>Already have an account?<button type="submit"><a href="{% url 'login' %}">LogIn</a></button></small>
+
+</main>
+
+<script src="{% static 'core/bootstrap.min.js' %}"></script>
+</body>
+</html>

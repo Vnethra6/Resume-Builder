@@ -1,0 +1,41 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'users/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'users/main.css' %}">
+    <meta charset="UTF-8">
+    <title>Resume Builder - Login</title>
+</head>
+<body>
+<main role="main" class="container">
+<div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <h2>Login</h2>
+            <div class="form-container">
+               <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        {{form | crispy}}
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <div>
+        <small>
+            Need an account? <a href="{% url 'register' %}">Sign Up Now</a>
+        </small>
+    </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</main>
+<script src="{% static 'users/bootstrap.min.js' %}"></script>
+</body>
+</html>

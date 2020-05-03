@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'core/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/main.css' %}">
+    <meta charset="UTF-8">
+    <title>Resume Builder</title>
+</head>
+<body>
+<h2>Build your resume in seconds....</h2>
+<br>
+<ul>
+        <li><button type="submit"><a href="{% url 'basic_info_check' %}">Basic Information</a><br/></button></li>
+        <br/>
+        <li><button type="submit"><a href="{% url 'education_check' %}">Education</a><br/></button></li>
+        <br/>
+        <li><button type="submit"><a href="{% url 'experience_check' %}">Experience</a><br/></button></li>
+        <br/>
+        <li><button type="submit"><a href="{% url 'skills_check' %}">Skill Set</a><br/></button></li>
+        <br/>
+        <li><button type="submit"><a href="{% url 'interest_check' %}">Interest</a><br/></button></li>
+
+</ul>
+<br>
+<div>
+    <hr>
+    <button type="submit"><a href="{% url 'preview' %}">Preview</a></button>
+    <button type="submit"><a href="{% url 'logout' %}">Log Out</a></button>
+</div>
+<script src="{% static 'core/bootstrap.min.js' %}"></script>
+</body>
+</html>
